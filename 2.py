@@ -19,7 +19,7 @@ while(True):
   
     # Display the resulting frame
     cv2.imshow('frame', frame)
-    cv2.imwrite('./camera_video_frames/frame'+str(i)+'.jpg',frame)
+    cv2.imwrite('./camera_video_frames/frame'+str(i).zfill(6)+'.jpg',frame)
     i+=1
     # the 'q' button is set as the
     # quitting button you may use any

@@ -19,7 +19,7 @@ while(cap.isOpened()):
     if ret == False:
         print("done")
         break
-    cv2.imwrite('./output_video_frames/frame'+str(i)+'.jpg',frame)
+    cv2.imwrite('./output_video_frames/frame'+str(i).zfill(6)+'.jpg',frame)
     i+=1
  
 cap.release()
