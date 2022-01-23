@@ -5,6 +5,14 @@ img_array = []
 filenames = []
 
 directory = input("please give path to directory (without the ending '/') : \n")
+fps = input("please give the desired :\n")
+if(not fps.isdigit()):
+    print("invalid")
+    exit()
+fps = int(fps)
+if(fps==0):
+    print("invalid")
+    exit()
 
 for filename in glob.glob(directory + '/*.jpg'):
     filenames.append(filename)
@@ -19,7 +27,7 @@ for filename in filenames:
     img_array.append(img)
  
  
-out = cv2.VideoWriter('project.mp4',cv2.VideoWriter_fourcc(*'mp4v'), 15, size)
+out = cv2.VideoWriter('project.mp4',cv2.VideoWriter_fourcc(*'mp4v'), fps, size)
 
 print("done")
 
